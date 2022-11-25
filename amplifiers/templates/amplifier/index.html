@@ -1,0 +1,30 @@
+{% extends 'base_menu.html' %}
+{% block title %}{{ settings.APP_NAME }}{% endblock %}
+{% block content %}
+<h1>Amplifier</h1>
+    <p>
+    {% if amplifier_list %}
+<ul>
+{% for amplifier in amplifier_list %}
+    <li>
+    <a href="{% url 'amplifiers:amplifier_detail' amplifier.id%}">{{ amplifier.model }}</a>
+    </li>
+{% endfor %}
+</ul>
+    {% else %}
+        <p> There are no amplifiers in the database.</p>
+    {% endif %}
+    </p>
+
+    <p>
+    <a href="{% url 'amplifiers:amplifier_create' %}">Create a amplifier</a>|
+{% if user.is_authenticated %}
+<a href="{% url 'logout' %}?next={% url 'amplifiers:all' %}">Logout</a>
+{% else %}
+<a href="{% url 'login' %}?next={% url 'amplifiers:all' %}">Login</a>
+{% endif %}
+
+
+    </p>
+
+{% endblock %}
