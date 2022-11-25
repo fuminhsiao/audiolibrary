@@ -1,0 +1,42 @@
+body{
+    background-color: floralwhite;
+}
+
+#header-nav {
+    background-image: linear-gradient(to bottom,#ffffff 0,#ffffff 100%);
+    margin-bottom: 0px;
+    border-radius: 0px;
+    min-height: 70px;
+
+
+}
+
+#menu-nav {
+    background-image: linear-gradient(to bottom,#1b1e21 0,#000000 100% );
+    margin-bottom: 0px;
+    border-radius: 0px;
+    border-color: #a3a3a3;
+
+}
+
+#logo-img{
+    background: url("../images/logo.png") no-repeat;
+    width: 117px;
+    height: 100px;
+    margin:10px 15px 10px 15px;
+}
+
+#menu-button{
+    margin-right: 0px;
+
+}
+
+#div_id_username {
+    width: 300px;
+    margin-top: 15px;
+
+}
+
+#div_id_password, #div_id_username, #div_id_email, #div_id_password1, #div_id_password2{
+    width: 300px;
+}
