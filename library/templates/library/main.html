@@ -1,0 +1,15 @@
+{% extends 'base_menu.html' %}
+{% block title %}{{ settings.APP_NAME }}{% endblock %}
+{% block content %}
+<h1>Acoustic Research Library</h1>
+<p>
+    <ul>
+    <li>
+        <a href="{% url 'speakers:all' %}">Speakers</a>
+    </li>
+    <li>
+        <a href="{% url 'amplifiers:all' %}">Amplifiers</a>
+    </li>
+    </ul>
+</p>
+{% endblock %}
